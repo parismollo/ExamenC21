@@ -29,4 +29,10 @@ int main() {
 
     for (somme = 0, cur = l; cur != NULL; somme = somme + cur->data, cur = cur->next);
     printf("somme = %d\n", somme);
+
+    free(l->next->next);
+    free(l->next);
+    free(l);
+    
+    
 }
