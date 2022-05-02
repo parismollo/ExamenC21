@@ -10,26 +10,24 @@ char *get_field(char *line, char del, int pos) {
     int counter = 0;
 
     assert(copy != NULL);
-
     strcpy(copy, line);
+    
     char *token = strtok(copy, delim);
     if(strcmp(token, "\n") == 0) {
-        // printf("*");
         return token;
     }
+
     if(pos == counter) {
         return token;
     }
+
     while (token != NULL) {
-        // printf(" %s\n", token);
         token = strtok(NULL, delim);
         if (strcmp(token, "\n") == 0) {
-            // printf("**");
             return token;
         }
         counter++;
         if(counter == pos) {
-            // printf("***");
             return token;
         }
     }

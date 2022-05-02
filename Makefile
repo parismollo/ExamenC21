@@ -15,8 +15,12 @@ ex3: exercice3.c
 ex6: exercice6.c
 	$(CC) $(CFLAGS) $^ -o $@
 
+ex8: exercice8.c
+	$(CC) $(CFLAGS) $^ -o $@
+
 clean:
 	rm -rf ex1
 	rm -rf ex2
 	rm -rf ex3
 	rm -rf ex6
+	rm -rf ex8
